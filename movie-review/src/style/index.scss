@@ -1,0 +1,20 @@
+@import "./navbar.scss";
+@import "./card.scss";
+@import "./favorites.scss";
+@import "./footer.scss";
+@import "./home.scss";
+@import "./login.scss";
+@import "./register.scss";
+@import "./sidebar.scss";
+@import "./users.scss";
+@import "./app.scss";
+
+body { 
+    min-height: 100vh;
+    padding-bottom: 5%;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

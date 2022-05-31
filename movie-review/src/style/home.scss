@@ -1,0 +1,45 @@
+.home {
+  width: 100%;
+}
+
+.homeForm {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+
+.homeRadio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homeSearch {
+  color: #1e555c;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.searchTab {
+  width: 75%;
+}
+
+.homeTables {
+  align-items: center;
+  width: 100%;
+}
+
+.homeTitle {
+  color: #440d0f;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.homeLine {
+    margin-top:-9px;
+    color: #1e555c;
+    font-weight: bolder;
+}

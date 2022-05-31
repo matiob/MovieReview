@@ -1,0 +1,29 @@
+.footerContainer {
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/23/17/33/curtain-1275200__340.png");
+  opacity: 2;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 10px 2px 4px 0 rgba(7, 7, 7, 0.424),
+    0 1px 15px 0 rgba(12, 12, 12, 0.623);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #FFFFC7;
+}
+
+.footerMedia {
+  height: 40px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
