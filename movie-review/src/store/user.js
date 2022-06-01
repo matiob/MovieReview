@@ -2,26 +2,26 @@ import axios from "axios";
 import { createReducer, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const sendRegisterRequest = createAsyncThunk("REGISTER", (body) => {
-  return axios.post("/api/users/register", body).then((res) => res.data);
+  return axios.post("http://localhost:3001/api/users/register", body).then((res) => res.data);
 });
 
 export const sendLoginRequest = createAsyncThunk("LOGIN", (body) => {
-  return axios.post("/api/users/login", body).then((res) => res.data);
+  return axios.post("http://localhost:3001/api/users/login", body).then((res) => res.data);
 });
 
 export const sendLogoutRequest = createAsyncThunk("LOGOUT", () => {
-  return axios.post("/api/users/logout").then((res) => res.data);
+  return axios.post("http://localhost:3001/api/users/logout").then((res) => res.data);
 });
 
 export const getUserLoggedRequest = createAsyncThunk("LOGGED", (id) => {
   return axios
-    .get(`/api/users/me`)
+    .get(`http://localhost:3001/api/users/me`)
     .then((res) => res.data)
 });
 
 export const getSingleUserRequest = createAsyncThunk("SINGLE_USER", (id) => {
   return axios
-    .get(`/api/users/${id}`)
+    .get(`http://localhost:3001/api/users/${id}`)
     .then((res) => res.data)
 });
 

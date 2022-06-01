@@ -24,55 +24,63 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <img src={image} alt="user logo" />
-          <h1>LOGIN</h1>
-          <h2>Sign in to your account</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <input type="hidden" name="remember" value="true" />
-          <div>
+    <seccion className="login">
+      <div className="card">
+        <img src={image} className="card-img-top" alt="user logo" />
+        <div className="card-body">
+          <h5 className="card-title">LOGIN</h5>
+          <p className="card-text">Sign in to your account</p>
+          <form onSubmit={handleSubmit}>
+            <input type="hidden" name="remember" value="true" />
             <div>
-              <input
-                aria-label="Email address"
-                type="text"
-                required
-                placeholder="Email address"
-                {...email}
-              />
+              <div>
+                <input
+                  aria-label="Email address"
+                  type="text"
+                  required
+                  placeholder="Email address"
+                  {...email}
+                />
+              </div>
+              <div>
+                <input
+                  aria-label="Password"
+                  type="password"
+                  required
+                  placeholder="Password"
+                  {...password}
+                />
+              </div>
             </div>
-            <div>
-              <input
-                aria-label="Password"
-                type="password"
-                required
-                placeholder="Password"
-                {...password}
-              />
-            </div>
-          </div>
-          <div>
-            <button type="submit">
-              <span>
-                <svg fill="currentColor" viewBox="0 0 20 20">
+            <div className="buttonWrap">
+              <button type="submit" className="btn btn-primary">
+                Sign In
+                <svg
+                  className="svg-icon"
+                  role="img"
+                  height="10"
+                  width="10"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                >
                   <path
                     fillRule="evenodd"
                     d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
                     clipRule="evenodd"
                   />
                 </svg>
-              </span>
-              Sign in
-            </button>
+              </button>
+            </div>
+          </form>
+          <div className="register">
+            <Link to="/register">
+              <h3>Register</h3>
+            </Link>
           </div>
-        </form>
-        <Link to="/register">
-        <h3>Register</h3>
-      </Link>
+        </div>
       </div>
-    </div>
+    </seccion>
   );
 };
 

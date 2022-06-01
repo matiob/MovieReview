@@ -1,6 +1,8 @@
 const axios = require("axios");
 const apiKey = process.env.API_KEY
 
+console.log("API-KEY->", apiKey);
+
 class MoviesServices {
   static async serviceGetPopulars() {
     try {
