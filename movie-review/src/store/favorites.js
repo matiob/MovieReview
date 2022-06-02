@@ -3,7 +3,7 @@ import { createReducer, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getFavRequest = createAsyncThunk("FAVORITES", (id) => {
   return axios
-    .get(`http://localhost:3001/api/favorites/${id}`)
+    .get(`/api/favorites/${id}`)
     .then((res) => res.data)
 });
 

@@ -28,4 +28,4 @@ db.sync({ force: false })
     console.log("DB 'sw_tmdb' connected");
     app.listen(3001, () => console.log("Server: http://localhost:3001"));
   })
-  .catch((err) => console.log(err));
+  .catch((err) => console.error(err));

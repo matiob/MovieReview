@@ -5,6 +5,8 @@ import { sendLogoutRequest } from "../store/user";
 const Navbar = () => {
   const user = useSelector((state) => state.user);
 
+  console.log("USER->", user);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -39,7 +41,7 @@ const Navbar = () => {
       <div className="navButtons">
         {user.id ? (
           <>
-            <button onClick={handleLogout}>
+            <button onClick={handleLogout} className="boton">
               <p>{user.name}</p>
               <img src={user.image} alt="user logo" />
             </button>

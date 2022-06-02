@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router";
-
+import { useDispatch, useSelector } from "react-redux";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
@@ -11,16 +12,21 @@ import Footer from "./commons/Footer";
 import NotFound from "./commons/NotFound";
 import Users from "./components/Users";
 import UserCard from "./commons/UserCard";
+import { getUserLoggedRequest } from "./store/user";
 
 const App = () => {
-
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getUserLoggedRequest());
+  }, []);
   return (
     <div className="app">
         <Navbar />
         <seccion className="content">
           <Sidebar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/users" element={<Users />} />

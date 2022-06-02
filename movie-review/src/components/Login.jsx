@@ -19,6 +19,7 @@ const Login = () => {
         password: password.value,
       })
     ).then((res) => {
+      console.log("RES->", res);
       res.payload ? navigate("/home") : navigate("/404");
     });
   };

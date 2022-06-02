@@ -7,6 +7,8 @@ import UserItem from "../commons/UserItem";
 const Users = () => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
+  const user = useSelector((state) => state.user);
+  console.log("USER->", user);
 
   useEffect(() => {
     dispatch(getUsersRequest());
