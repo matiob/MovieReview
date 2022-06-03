@@ -26,20 +26,19 @@ const Register = () => {
       .then(() => dispatch(sendLogoutRequest()))
       .then(() => {
         alert("User created successfully");
-        navigate("/home/movies");
+        navigate("/login");
       })
       .catch(() => navigate("/404"));
   };
 
   return (
-    <section>
-      <div>
-        <div>
-          <img src={defaultImage} alt="user logo" />
-          <h1>REGISTER</h1>
-          <h2>Create your account</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
+    <section className="register">
+      <div className="card">
+        <img src={defaultImage} className="card-img-top" alt="user logo" />
+        <div className="card-body">
+          <h5 className="card-title">REGISTER</h5>
+          <p className="card-text">Create your account</p>
+          <form onSubmit={handleSubmit}>
           <input type="hidden" name="remember" value="true" />
           <div>
             <div>
@@ -79,21 +78,28 @@ const Register = () => {
               />
             </div>
           </div>
-          <div>
-            <button type="submit">
-              <span>
-                <svg fill="currentColor" viewBox="0 0 20 20">
+            <div className="buttonWrap">
+              <button type="submit" className="btn btn-primary">
+                Sign Up
+                <svg
+                  className="svg-icon"
+                  role="img"
+                  height="10"
+                  width="10"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                >
                   <path
                     fillRule="evenodd"
                     d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
                     clipRule="evenodd"
                   />
                 </svg>
-              </span>
-              Sign up
-            </button>
-          </div>
-        </form>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );

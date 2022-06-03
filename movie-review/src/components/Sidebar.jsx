@@ -15,7 +15,7 @@ const Sidebar = () => {
   }, [user]);
 
   return (
-      <div
+      <aside
         className="d-flex flex-column flex-shrink-0 p-3 bg-light aside"
       >
         <a
@@ -117,7 +117,7 @@ const Sidebar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </aside>
   );
 };
 

@@ -20,12 +20,12 @@ const Login = () => {
       })
     ).then((res) => {
       console.log("RES->", res);
-      res.payload ? navigate("/home") : navigate("/404");
+      res.payload ? navigate("/") : navigate("/404");
     });
   };
 
   return (
-    <seccion className="login">
+    <section className="login">
       <div className="card">
         <img src={image} className="card-img-top" alt="user logo" />
         <div className="card-body">
@@ -74,14 +74,14 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <div className="register">
+          <div className="registerLogin">
             <Link to="/register">
               <h3>Register</h3>
             </Link>
           </div>
         </div>
       </div>
-    </seccion>
+    </section>
   );
 };
 
